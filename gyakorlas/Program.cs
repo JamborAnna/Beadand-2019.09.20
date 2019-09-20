@@ -10,6 +10,31 @@ namespace gyakorlas
     {
         static void Main(string[] args)
         {
+            List<int> lista = new List<int>();
+            int bekertSzam=0;
+            int max=0;
+            int bekeresSzama = 0;
+            Console.WriteLine("Kérem adja meg hány szám közül szeretné megkeresni a legnagybbat: ");
+            bekeresSzama = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 0; i <bekeresSzama; i++)
+            {
+                Console.WriteLine("Kérem, adjon meg egy számot.");
+                bekertSzam = Convert.ToInt16(Console.ReadLine());
+                lista.Add(bekertSzam);
+              
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (max<lista[i])
+                {
+                   max=lista[i];
+                }
+            }
+            Console.WriteLine("A legnagyobb szám:{0} ",max);
+            
+            Console.ReadKey();
         }
+        
     }
 }
