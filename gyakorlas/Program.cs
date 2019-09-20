@@ -13,6 +13,7 @@ namespace gyakorlas
             List<int> lista = new List<int>();
             int bekertSzam=0;
             int max=0;
+            int min = 10000;
             int bekeresSzama = 0;
             Console.WriteLine("Kérem adja meg hány szám közül szeretné megkeresni a legnagybbat: ");
             bekeresSzama = Convert.ToInt16(Console.ReadLine());
@@ -30,9 +31,18 @@ namespace gyakorlas
                 {
                    max=lista[i];
                 }
+                
             }
             Console.WriteLine("A legnagyobb szám:{0} ",max);
-            
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (min > lista[i])
+                {
+                    min = lista[i];
+                }
+
+            }
+            Console.WriteLine("A legkisebb szám: {0}",min);
             Console.ReadKey();
         }
         
